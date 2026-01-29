@@ -1,0 +1,39 @@
+{
+  "destination": [
+    {
+      "id": 1,
+      "name": "Paris",
+      "days": 5,
+      "funFact": "Known as the City of Light.",
+      "price": 1200
+    },
+    {
+      "id": 2,
+      "name": "Tokyo",
+      "days": 7,
+      "funFact": "Famous for its cherry blossoms.",
+      "price": 1500
+    },
+    {
+      "id": 3,
+      "name": "New York",
+      "days": 4,
+      "funFact": "Home to the Statue of Liberty.",
+      "price": 1000
+    },
+    {
+      "id": 4,
+      "name": "Sydney",
+      "days": 6,
+      "funFact": "Famous for the Sydney Opera House.",
+      "price": 1300
+    },
+    {
+      "id": 5,
+      "name": "Rome",
+      "days": 5,
+      "funFact": "Known for its ancient ruins.",
+      "price": 1100
+    }
+  ]
+}
