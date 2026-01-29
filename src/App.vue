@@ -34,12 +34,14 @@
       </table>
     </div>
     <!-- <button @clickdata="fetchUsers">Fetch Users</button> -->
+    <Parent></Parent>
   </div>
 </template>
 <script setup>
 import { onMounted, reactive } from "vue";
 import Loader from "./components/Loader.vue";
 import { useFetch } from "./composables/useFetch.js";
+import Parent from "./components/Parent.vue";
 const {
   data: destinations,
   isLoading,
