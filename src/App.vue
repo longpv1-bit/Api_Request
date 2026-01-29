@@ -6,6 +6,11 @@
     >
       <Loader />
     </div>
+    <div v-else-if="error">
+      <p class="text-danger">
+        {{ error.message || "Something went wrong" }}
+      </p>
+    </div>
     <div class="container p-4 bg-white" v-else>
       <div class="text-success text-center">
         <h2>Destination List</h2>
