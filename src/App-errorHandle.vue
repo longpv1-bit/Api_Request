@@ -1,0 +1,38 @@
+<template>
+  <div>
+    <div
+      v-if="isLoading"
+      class="d-flex justify-content-center align-items-center"
+    >
+      <Loader />
+    </div>
+    <div v-else-if="error">
+      <p class="text-danger">
+        {{ error.message || "Something went wrong" }}
+      </p>
+    </div>
+    <div class="container p-4 bg-white" v-else>
+      <div class="text-success text-center">
+        <h2>Destination List</h2>
+      </div>
+    </div>
+    <!-- <button @clickdata="fetchUsers">Fetch Users</button> -->
+    <Parent></Parent>
+  </div>
+</template>
+<script setup>
+import { onMounted, reactive } from "vue";
+import Loader from "./components/Loader.vue";
+import { useFetch } from "./composables/useFetch.js";
+import Parent from "./components/Parent.vue";
+const {
+  data: destinations,
+  isLoading,
+  error,
+  fetchData,
+} = useFetch("http://localhost:3000/destination");
+
+onMounted(() => {
+  fetchData();
+});
+</script>
